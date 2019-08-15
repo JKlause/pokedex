@@ -2,6 +2,7 @@ import Component from '../Component.js';
 import Header from './Header.js';
 import PokedexList from '../pokedex/PokedexList.js';
 import Search from '../options/Search.js';
+import Sort from '../options/Sort.js';
 const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
 
 
@@ -30,6 +31,11 @@ class App extends Component {
         const searchFieldDOM = searchField.renderDOM();
         const searchBySection = dom.querySelector('#search-by');
         searchBySection.appendChild(searchFieldDOM);
+            
+        const sortField = new Sort();
+        const sortFieldDOM = sortField.renderDOM();
+        const sortBySection = dom.querySelector('#sort-by');
+        sortBySection.appendChild(sortFieldDOM);
     }
 
     renderHTML() {
@@ -39,7 +45,9 @@ class App extends Component {
                     <section></section>
                         <h2>Search The PokeDex</h2>
                         <div id="search-by"></div>
-                    <section id="sort-by"></section>
+                    <section></section>
+                        <h2>Sort The PokeDex</h2>
+                        <div id="sort-by"></div>
                     <section id="pokedex-list"></section>
                 </main>
             </div>
