@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background-color: #DBD5B5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    height: 14vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #FCAB10;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 5vh;
+    color: #F8333C;
+
+}
+header>img {
+    height: 10vh;
+    margin-left: 5vw;
+    margin-right: 8vw;
+}
+header>h1 {
+    font-size: 4em;
+}
+
+#search-by {
+    background-color: #2B9EB3;
+    color: #FCAB10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 14vh;
+    margin-bottom: 4vh;
+}
+#search-by>h2 {
+    font-size: 2em;
+}
+#search-by select {
+    margin-right: 5vw;
+}
+
+#sort-by {
+    background-color: #44AF69;
+    color: #FCAB10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 14vh;
+    margin-bottom: 4vh;
+}
+#sort-by>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sort-by>h2 {
+    font-size: 2em;
+}
+#sort-by label {
+    font-size: 1.2em;
+}
+#sort-by input {
+    font-size: 1.2em;
+    margin-right: 4vw;
+}
+
+#pokedex-list>ul {
+    width: 80vw;
+    height: 100vh;
+    background-color: #F8333C;
+    display: flex;
+    flex-wrap: wrap;
+}
+li {
+    list-style: none;
+    height: 25vh;
+    width: 20vw;
+    background-color: #F8D030;
+}
+li>img {
+    height: 60%;
+}
