@@ -21,7 +21,8 @@ class App extends Component {
                 props = { pokemon: pokemonList };
                 const pokedexList = new PokedexList(props);
                 const pokedexListDOM = pokedexList.renderDOM();
-                dom.appendChild(pokedexListDOM);
+                const pokedexOnPage = dom.querySelector('#pokedex-list');
+                pokedexOnPage.appendChild(pokedexListDOM);
             })
             .catch(err => {
                 // eslint-disable-next-line no-console
@@ -43,12 +44,8 @@ class App extends Component {
         return /*HTML*/`
             <div>
                 <main>
-                    <section></section>
-                        <h2>Search The PokeDex</h2>
-                        <div id="search-by"></div>
-                    <section></section>
-                        <h2>Sort The PokeDex</h2>
-                        <div id="sort-by"></div>
+                    <section id="search-by"></section>
+                    <section id="sort-by"></section>
                     <section id="pokedex-list"></section>
                 </main>
             </div>
