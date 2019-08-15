@@ -24,6 +24,7 @@ class App extends Component {
                 dom.appendChild(pokedexListDOM);
             })
             .catch(err => {
+                // eslint-disable-next-line no-console
                 console.error('fetch error:', err);
             });
         
