@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from './Header.js';
 import PokedexList from '../pokedex/PokedexList.js';
+import Search from '../options/Search.js';
 const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
 
 
@@ -24,15 +25,20 @@ class App extends Component {
             .catch(err => {
                 console.error('fetch error:', err);
             });
-
-     
+        
+        const searchField = new Search();
+        const searchFieldDOM = searchField.renderDOM();
+        const searchBySection = dom.querySelector('#search-by');
+        searchBySection.appendChild(searchFieldDOM);
     }
 
     renderHTML() {
         return /*HTML*/`
             <div>
                 <main>
-                    <section id="search-by"></section>
+                    <section></section>
+                        <h2>Search The PokeDex</h2>
+                        <div id="search-by"></div>
                     <section id="sort-by"></section>
                     <section id="pokedex-list"></section>
                 </main>
