@@ -11,8 +11,8 @@ class Search extends Component {
                     <select id="search-type">
                         <option value="name">Name</option>
                         <option value="type">Type</option>
-                        <option value="attack">Minimum Attack Points</option>
-                        <option value="defence">Minimum Defense Points</option>
+                        <option value="attack">Min Attack Points</option>
+                        <option value="defence">Min Defense Points</option>
                     </select>
                     <input id="user-search" name="user-search" input="text"></input>
                     <button>Search the PokeDex</button>
