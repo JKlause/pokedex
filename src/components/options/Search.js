@@ -6,8 +6,8 @@ class Search extends Component {
         return /*HTML*/`
             <div>
                 <h2>Search The PokeDex</h2>
-                <h3>Search By</h3>
                 <form id="search-form">
+                    <h3>Search By</h3>
                     <select id="search-type">
                         <option value="name">Name</option>
                         <option value="type">Type</option>

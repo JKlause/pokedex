@@ -10,8 +10,8 @@ class PokedexCard extends Component {
                 <div id="li-data">
                     <p id="li-type-1">Type: ${pokemon.type_1}</p>
                     <p id="li-type-2">Type: ${pokemon.type_2}</p>
-                    <p id="li-attack">Attack Points: ${pokemon.attack} Points</p>
-                    <p id="li-defence">Defence Points: ${pokemon.defense} Points</p>
+                    <p id="li-attack">Attack: ${pokemon.attack} pts</p>
+                    <p id="li-defence">Defence: ${pokemon.defense} pts</p>
                 </div>
             </li>
         `;
