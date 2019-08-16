@@ -37,34 +37,44 @@
             <h2>Sort The PokeDex</h2>
             <div>
                 <div>
-                    <label for="sort-name">Pokemon Name</label>
                     <input type="radio" id="sort-name" name="sort-option" checked=true>
+                    <label for="sort-name">Pokemon Name</label>
                 </div>
                 <div>
-                    <label for="sort-type">Pokemon Type</label>
                     <input type="radio" id="sort-type" name="sort-option">
+                    <label for="sort-type">Pokemon Type</label>
                 </div>
                 <div>
-                    <label for="sort-attack">Pokemon Attack</label>
                     <input type="radio" id="sort-attack" name="sort-option">
+                    <label for="sort-attack">Pokemon Attack</label>
                 </div>
                 <div>
-                    <label for="sort-defence">Pokemon Defence</label>
                     <input type="radio" id="sort-defence" name="sort-option">
+                    <label for="sort-defence">Pokemon Defence</label>
                 </div>
             </div>
         </div>
     </section>
     <section id="pokedex-list">
         <ul>
-            <li style="background-color:#F8D030">
+            <li>
                 <h3 id="li-name">Pikachu</h3>
+                <div id="type-section">
+                    <p id="li-type-1" style="background-color:#F8D030">Electric</p>
+                    <p id="li-type-2" style="background-color:N/A">N/A</p>
+                </div>
                 <img id="li-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
-                <div id="li-data">
-                    <p id="li-type-1">Electric</p>
-                    <p id="li-type-2">N/A</p>
-                    <p id="li-attack">Attack: 55 pts</p>
-                    <p id="li-defence">Defence: 40 pts</p>
+                <div>
+                    <p id="egg-group">Monster</p>
+                    <div>
+                        <p id="ability_1">Static</p>
+                        <p id="ability_2">NA</p>
+                        <p id="ability_hidden">Lightning-rod</p>
+                    </div>
+                    <div>
+                        <p id="li-attack">Attack: 55 pts</p>
+                        <p id="li-defence">Defence: 40 pts</p>
+                    </div>
                 </div>
             </li>
             <li></li>
