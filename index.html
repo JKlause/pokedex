@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PokeDex</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/reset.css">
     <link rel="stylesheet" href="src/style/main.css">
 </head>
 <body>
@@ -12,66 +14,65 @@
         <img src="./assets/pokeball.png" alt="A Poke Ball">
         <h1>The PokeDex</h1>
     </header>
-    <main>
-        <section id="search-by">
+    <section id="search-by">
+        <div>
+            <h2>Search The PokeDex</h2>
+            <h3>Search By</h3>
             <div>
-                <h2>Search The PokeDex</h2>
+                <form id="search-form">
+                    <select id="search-type">
+                        <option value="name">Name</option>
+                        <option value="type">Type</option>
+                        <option value="attack">Minimum Attack Points</option>
+                        <option value="defence">Minimum Defense Points</option>
+                    </select>
+                    <input id="user-search" name="user-search" input="text">
+                    <button>Search the PokeDex</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="sort-by">
+        <div>
+            <h2>Sort The PokeDex</h2>
+            <div>
                 <div>
-                    <form id="search-form">
-                        <select id="search-type">
-                            <option value="name">Name</option>
-                            <option value="type">Type</option>
-                            <option value="attack">Minimum Attack Points</option>
-                            <option value="defence">Minimum Defense Points</option>
-                        </select>
-                        <input id="user-search" name="user-search" input="text">
-                        <button>Search the PokeDex</button>
-                    </form>
+                    <label for="sort-name">Pokemon Name</label>
+                    <input type="radio" id="sort-name" name="sort-option" checked=true>
+                </div>
+                <div>
+                    <label for="sort-type">Pokemon Type</label>
+                    <input type="radio" id="sort-type" name="sort-option">
+                </div>
+                <div>
+                    <label for="sort-attack">Pokemon Attack</label>
+                    <input type="radio" id="sort-attack" name="sort-option">
+                </div>
+                <div>
+                    <label for="sort-defence">Pokemon Defence</label>
+                    <input type="radio" id="sort-defence" name="sort-option">
                 </div>
             </div>
-        </section>
-        <section id="sort-by">
-            <div>
-                <h2>Sort The PokeDex</h2>
-                <div>
-                    <div>
-                        <label for="sort-name">Pokemon Name</label>
-                        <input type="radio" id="sort-name" name="sort-option" checked=true>
-                    </div>
-                    <div>
-                        <label for="sort-type">Pokemon Type</label>
-                        <input type="radio" id="sort-type" name="sort-option">
-                    </div>
-                    <div>
-                        <label for="sort-attack">Pokemon Attack</label>
-                        <input type="radio" id="sort-attack" name="sort-option">
-                    </div>
-                    <div>
-                        <label for="sort-defence">Pokemon Defence</label>
-                        <input type="radio" id="sort-defence" name="sort-option">
-                    </div>
+        </div>
+    </section>
+    <section id="pokedex-list">
+        <ul>
+            <li style="background-color:#F8D030">
+                <h3 id="li-name">Pikachu</h3>
+                <img id="li-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
+                <div id="li-data">
+                    <p id="li-type-1">Type: Electric</p>
+                    <p id="li-type-2">Type: N/A</p>
+                    <p id="li-attack">Attack Points: 55 Points</p>
+                    <p id="li-defence">Defence Points: 40 Points</p>
                 </div>
-            </div>
-        </section>
-        <section id="pokedex-list">
-            <ul>
-                <li style="background-color:#F8D030">
-                    <h3 id="li-name">Pikachu</h3>
-                    <img id="li-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
-                    <div id="li-data">
-                        <p id="li-type-1">Type: Electric</p>
-                        <p id="li-type-2">Type: N/A</p>
-                        <p id="li-attack">Attack Points: 55 Points</p>
-                        <p id="li-defence">Defence Points: 40 Points</p>
-                    </div>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-    </main>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
 </body>
 </html>

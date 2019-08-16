@@ -43,11 +43,9 @@ class App extends Component {
     renderHTML() {
         return /*HTML*/`
             <div>
-                <main>
                     <section id="search-by"></section>
                     <section id="sort-by"></section>
                     <section id="pokedex-list"></section>
-                </main>
             </div>
         `;
     }
