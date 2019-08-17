@@ -7,7 +7,6 @@ h2 {
     margin-bottom: 10px;
     text-align: center;
 }
-
 body {
     background-color: #DBD5B5;
     font-family: 'Caveat', cursive;
@@ -21,21 +20,11 @@ body {
     ". sort ."
     ". pokedex .";
 }
-header{
-    grid-area: header;
-}
-#search-by {
-    grid-area: search;
-}
-#sort-by {
-    grid-area: sort;
-}
-#pokedex-list {
-    grid-area: pokedex;
-}
+
 
 
 header {
+    grid-area: header;
     background-color: #FCAB10;
     border: solid 10px #2B9EB3;
     display: flex;
@@ -45,13 +34,11 @@ header {
     color: #F8333C;
     padding: 15px;
 }
-
 header>img {
     height: 80px;
     padding-left: 5vw;
     margin-right: 8vw;
 }
-
 header>h1 {
     font-weight: bolder;
     font-size: 4em;
@@ -59,7 +46,10 @@ header>h1 {
 }
 
 
+
+
 #search-by {
+    grid-area: search;
     border: solid 6px #F8333C;
     background-color: #2B9EB3;
     color: #FCAB10;
@@ -79,6 +69,7 @@ header>h1 {
     border: solid 3px #F8333C;
 }
 #search-by h3 {
+    font-family: 'Noto Sans', sans-serif;
     margin-bottom: 10px;
     font-size: 1.5em;
     text-decoration-line: underline;
@@ -101,7 +92,9 @@ header>h1 {
 }
 
 
+
 #sort-by {
+    grid-area: sort;
     border: solid 6px #F8333C;
     background-color: #2B9EB3;
     color: #FCAB10;
@@ -123,6 +116,8 @@ header>h1 {
     margin-right: 1vw;
 }
 #sort-by>div>div {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .7em;
     background-color: #44AF69;
     padding: 15px;
     border: solid 3px #F8333C;
@@ -131,6 +126,9 @@ header>h1 {
 
 
 
+#pokedex-list {
+    grid-area: pokedex;
+}
 #pokedex-list>ul {
     background-color: #FCAB10;
     display: flex;
@@ -138,15 +136,19 @@ header>h1 {
     padding: 20px;
     border: solid 10px #2B9EB3;
 }
+
+
+
 li {
+    font-family: 'Noto Sans', sans-serif;
     background-color: rgb(245, 245, 245);
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
     padding: 5px;
-    border: solid 6px #2B9EB3;
-    height: 230px;
+    border: solid 6px #44AF69;
+    height: 300px;
     width: 200px;
     margin: 0 10px 10px 0;
 }
@@ -166,4 +168,19 @@ li h3 {
 li>img {
     margin: 5px;
     height: 60%;
+}
+
+#card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#card-info>p {
+    margin-bottom: 5px;
+}
+#card-info>div {
+    font-size: .5em;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
 }
