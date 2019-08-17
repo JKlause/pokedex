@@ -9,21 +9,33 @@ test('renders html from data', assert => {
         pokemon: 'pikachu',
         url_image: 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png',
         type_1: 'Electric',
-        type_2: 'N/A',
+        type_2: 'NA',
+        ability_1: 'static',
+        ability_2: 'NA',
+        ability_hidden: 'lightning-rod',
         attack: '55',
         defense: '40',
-        color_1: '#F8D030'
+        color_1: '#F8D030',
+        color_2: 'NA',
+        egg_group_1: 'ground'
     };
     
     const expected = /*html*/`
-    <li style="background-color:#F8D030">
-        <h3 id="li-name">PIKACHU</h3>
+    <li>
+        <h3 id="li-name">pikachu</h3>
+        <div id="type-section">
+            <p id="li-type-1" style="background-color:#F8D030">Electric</p>
+            <p id="li-type-2" style="background-color:NA">NA</p>
+        </div>
         <img id="li-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="pikachu">
-        <div id="li-data">
-            <p id="li-type-1">Type: Electric</p>
-            <p id="li-type-2">Type: N/A</p>
-            <p id="li-attack">Attack Points: 55 Points</p>
-            <p id="li-defence">Defence Points: 40 Points</p>
+        <div id="card-info">
+            <p id="egg-group">ground</p>
+            <div>
+                <p>static | NA | lightning-rod</p>
+            </div>
+            <div>
+                <p>Attack: 55 pts | Defence: 40 pts</p>
+            </div>
         </div>
     </li>
 `;
