@@ -131,17 +131,17 @@ header>h1 {
 }
 #pokedex-list>ul {
     background-color: #FCAB10;
-    display: flex;
-    flex-wrap: wrap;
     padding: 20px;
     border: solid 10px #2B9EB3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 
 
 li {
     font-family: 'Noto Sans', sans-serif;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(223, 221, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,8 +149,7 @@ li {
     padding: 5px;
     border: solid 6px #44AF69;
     height: 300px;
-    width: 200px;
-    margin: 0 10px 10px 0;
+    margin: 0 20px 20px 0;
 }
 li h3 {
     font-size: 1.4em;
@@ -169,7 +168,6 @@ li>img {
     margin: 5px;
     height: 60%;
 }
-
 #card-info {
     display: flex;
     flex-direction: column;
