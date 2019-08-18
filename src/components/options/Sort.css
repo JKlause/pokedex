@@ -1,0 +1,30 @@
+#sort-by {
+    grid-area: sort;
+    border: solid 6px #F8333C;
+    background-color: #2B9EB3;
+    color: #FCAB10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;  
+}
+#sort-by>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sort-by label {
+    font-size: 1.5em;
+}
+#sort-by input {
+    font-size: 1.2em;
+    margin-right: 1vw;
+}
+#sort-by>div>div {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .7em;
+    background-color: #44AF69;
+    padding: 15px;
+    border: solid 3px #F8333C;
+    text-decoration-line: underline;
+}
