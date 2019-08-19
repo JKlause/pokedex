@@ -34,9 +34,7 @@ class App extends Component {
         pokedexOnPage.appendChild(pokedexListDOM);
 
         function loadPokemon() {
-            console.log('in load');
             const options = hashStorage.get();
-            console.log('options', options)
             getPokemon(options)
                 .then(pokemonList => {
                     const pokemon = pokemonList.results;
