@@ -28,3 +28,7 @@
     border: solid 3px #F8333C;
     text-decoration-line: underline;
 }
+
+#sort-by button {
+    margin-top: 5px;
+}

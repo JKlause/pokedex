@@ -4,8 +4,9 @@ export function getPokemon(options) {
     const page = options.page || 1;
     let search = options.search || '';
     let searchBy = options.searchBy || 'pokemon';
-
-    const url = `${URL}?page=${page || 1}&${searchBy}=${search || ''}`;
+    let sort = options.sort || '';
+    
+    const url = `${URL}?page=${page || 1}&${searchBy}=${search || ''}&sort=${sort}`;
 
     return fetch(url)
         .then(response => response.json())
