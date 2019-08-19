@@ -9,8 +9,12 @@ class Search extends Component {
             event.preventDefault();
             const formData = new FormData(searchForm);
             const search = formData.get('user-search');
+            const searchType = searchForm.querySelector('#search-type');
+            const searchBy = searchType.value;
+
             hashStorage.set({
                 search: search,
+                searchBy: searchBy,
                 page: 1
             });
         });
@@ -32,10 +36,11 @@ class Search extends Component {
                     <form id="search-form">
                         <h3>Search By</h3>
                         <select id="search-type">
-                            <option value="name">Name</option>
+                            <option value="pokemon">Name</option>
                             <option value="type">Type</option>
+                            <option value="eggGroup">Egg Group</option>
                             <option value="attack">Min Attack Points</option>
-                            <option value="defence">Min Defense Points</option>
+                            <option value="defense">Min Defense Points</option>
                         </select>
                         <input id="user-search" name="user-search" input="${search}"></input>
                         <button>Search the PokeDex</button>
