@@ -2,9 +2,6 @@ import Component from '../Component.js';
 
 class Sort extends Component {
 
-    onRender(dom) {
-
-    }
     renderHTML() {
         return /*HTML*/`
             <div>
