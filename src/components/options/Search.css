@@ -1,0 +1,43 @@
+#search-by {
+    grid-area: search;
+    border: solid 6px #F8333C;
+    background-color: #2B9EB3;
+    color: #FCAB10;
+    padding: 15px;
+}
+#search-by>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#search-by form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #44AF69;
+    padding: 15px;
+    border: solid 3px #F8333C;
+}
+#search-by h3 {
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-decoration-line: underline;
+}
+#search-by form>select {
+    margin-bottom: 10px;
+    height: 20px;
+    width: 200px;
+    -webkit-appearance: none;
+}
+#search-by form>input {
+    margin-bottom: 20px;
+    height: 20px;
+    width: 200px;
+}
+#search-by form>button {
+    height: 20px;
+    width: 150px;
+    -webkit-appearance: none;
+}
+

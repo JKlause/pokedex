@@ -1,0 +1,10 @@
+#pokedex-list {
+    grid-area: pokedex;
+}
+#pokedex-list>ul {
+    background-color: #FCAB10;
+    padding: 20px;
+    border: solid 10px #2B9EB3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

@@ -1,0 +1,21 @@
+header {
+    grid-area: header;
+    background-color: #FCAB10;
+    border: solid 10px #2B9EB3;
+    display: flex;
+    flex-direction: row;
+    background-color: #FCAB10;
+    align-items: center;
+    color: #F8333C;
+    padding: 15px;
+}
+header>img {
+    height: 80px;
+    padding-left: 5vw;
+    margin-right: 8vw;
+}
+header>h1 {
+    font-weight: bolder;
+    font-size: 4em;
+    flex-grow: 1;
+}

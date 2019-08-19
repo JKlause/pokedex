@@ -1,0 +1,29 @@
+.paging {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.paging button {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    background-color: #FCAB10;
+    color: white;
+}
+
+.paging button:disabled {
+    background-color: rgb(255, 213, 134);
+}
+
+.paging button:hover {
+    background-color: #44AF69;
+}
+
+.paging span {
+    margin: 10px 10px;
+}
