@@ -2,6 +2,10 @@ import Component from '../Component.js';
 
 class Search extends Component {
 
+    onRender(form) {
+        form.addEventListener
+    }
+
     renderHTML() {
         return /*HTML*/`
             <div>

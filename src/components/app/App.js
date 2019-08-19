@@ -11,29 +11,10 @@ import hashStorage from '../../services/hash-storage.js';
 
 class App extends Component {
     onRender(dom) {
-        let props;
         const header = new Header();
         const headerDom = header.renderDOM();
         dom.prepend(headerDom);
 
-
-        function loadPokemon() {
-            const options = hashStorage.get();
-            getPokemon(options)
-                .then(pokemonList => {
-                    props = { pokemon: pokemonList };
-                    const pokemon = pokemonList.pokemon;
-                    const totalCount = pokemonList.count;
-                    
-                    pokedexList.update({ pokemon: pokemon });
-                    paging.update({
-                        totalCount: totalCount,
-                        currentPage: +options.page
-                    });
-                });
-        }
-
-        
         const searchField = new Search();
         const searchFieldDOM = searchField.renderDOM();
         const searchBySection = dom.querySelector('#search-by');
@@ -45,13 +26,26 @@ class App extends Component {
         sortBySection.appendChild(sortFieldDOM);
 
         const paging = new Paging();
-        sortBySection.appendChild(paging.renderDOM());
+        searchBySection.appendChild(paging.renderDOM());
 
-        const pokedexList = new PokedexList(props);
+        const pokedexList = new PokedexList({ pokemon: [] });
         const pokedexListDOM = pokedexList.renderDOM();
         const pokedexOnPage = dom.querySelector('#pokedex-list');
         pokedexOnPage.appendChild(pokedexListDOM);
 
+        function loadPokemon() {
+            const options = hashStorage.get();
+            getPokemon(options)
+                .then(pokemonList => {
+                    const pokemon = pokemonList.results;
+                    const totalCount = pokemonList.count;
+                    pokedexList.update({ pokemon: pokemon });
+                    paging.update({
+                        totalCount: totalCount,
+                        currentPage: +options.page
+                    });
+                });
+        }
         loadPokemon();
     }
         
