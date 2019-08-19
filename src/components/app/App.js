@@ -47,6 +47,10 @@ class App extends Component {
                 });
         }
         loadPokemon();
+
+        window.addEventListener('hashchange', () => {
+            loadPokemon();
+        });
     }
         
 
