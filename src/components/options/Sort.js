@@ -9,16 +9,19 @@ class Sort extends Component {
             const formData = new FormData(sortForm);
             let sort = '';
             sort = formData.get('sort-option');
+            
             hashStorage.set({
                 sort: sort
             });
         });
 
-        const input = form.querySelector('input');
-        
-
         window.addEventListener('hashchange', () => {
-            input.value = hashStorage.get().sort || '';
+            const sort = hashStorage.get().sort || '';
+            const input = form.querySelector(`input[value=${sort}]`);
+            if(!input){
+                return;
+            } 
+            input.checked = true;
         });
 
     }
