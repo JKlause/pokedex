@@ -1,8 +1,10 @@
 .paging {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bolder;
 }
 
 .paging button {
@@ -10,15 +12,18 @@
     height: 50px;
     width: 50px;
     font-size: 2em;
-    background-color: sandybrown;
+    background-color: #FCAB10;
     color: white;
 }
 
 .paging button:disabled {
-    background-color: bisque;
-    color: oldlace;
+    background-color: rgb(255, 213, 134);
+}
+
+.paging button:hover {
+    background-color: #44AF69;
 }
 
 .paging span {
-    margin: 0 10px;
+    margin: 10px 10px;
 }
