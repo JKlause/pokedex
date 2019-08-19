@@ -2,19 +2,20 @@ import Component from '../Component.js';
 import hashStorage from '../../services/hash-storage.js';
 
 class Sort extends Component {
-    onRedner(form) {
+    onRender(form) {
         let sortForm = form.querySelector('#sort-form');
         sortForm.addEventListener('submit', event => {
             event.preventDefault();
             const formData = new FormData(sortForm);
-            const sort = formData.get('sort-options');
-
+            let sort = '';
+            sort = formData.get('sort-option');
             hashStorage.set({
                 sort: sort
             });
         });
 
         const input = form.querySelector('input');
+        
 
         window.addEventListener('hashchange', () => {
             input.value = hashStorage.get().sort || '';
@@ -45,10 +46,9 @@ class Sort extends Component {
                         </div>
                         <div>
                             <input type="radio" id="sort-defense" name="sort-option" value="defense">
-                            <label for="sort-defence">Defense</label>
+                            <label for="sort-defense">Defense</label>
                         </div>
                         <button>Sort the PokeDex</button>
-
                     </form>
                 </div>
             </div>
