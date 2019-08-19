@@ -3,8 +3,9 @@ import Header from './Header.js';
 import PokedexList from '../pokedex/PokedexList.js';
 import Search from '../options/Search.js';
 import Sort from '../options/Sort.js';
-const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
-
+import { getPokemon } from '../../services/pokemon-api.js';
+import Paging from '../options/Paging.js';
+import hashStorage from '../../services/hash-storage.js';
 
 
 
@@ -15,19 +16,23 @@ class App extends Component {
         const headerDom = header.renderDOM();
         dom.prepend(headerDom);
 
-        fetch(URL)
-            .then(response => response.json())
-            .then(pokemonList => {
-                props = { pokemon: pokemonList };
-                const pokedexList = new PokedexList(props);
-                const pokedexListDOM = pokedexList.renderDOM();
-                const pokedexOnPage = dom.querySelector('#pokedex-list');
-                pokedexOnPage.appendChild(pokedexListDOM);
-            })
-            .catch(err => {
-                // eslint-disable-next-line no-console
-                console.error('fetch error:', err);
-            });
+
+        function loadPokemon() {
+            const options = hashStorage.get();
+            getPokemon(options)
+                .then(pokemonList => {
+                    props = { pokemon: pokemonList };
+                    const pokemon = pokemonList.pokemon;
+                    const totalCount = pokemonList.count;
+                    
+                    pokedexList.update({ pokemon: pokemon });
+                    paging.update({
+                        totalCount: totalCount,
+                        currentPage: +options.page
+                    });
+                });
+        }
+
         
         const searchField = new Search();
         const searchFieldDOM = searchField.renderDOM();
@@ -38,7 +43,18 @@ class App extends Component {
         const sortFieldDOM = sortField.renderDOM();
         const sortBySection = dom.querySelector('#sort-by');
         sortBySection.appendChild(sortFieldDOM);
+
+        const paging = new Paging();
+        sortBySection.appendChild(paging.renderDOM());
+
+        const pokedexList = new PokedexList(props);
+        const pokedexListDOM = pokedexList.renderDOM();
+        const pokedexOnPage = dom.querySelector('#pokedex-list');
+        pokedexOnPage.appendChild(pokedexListDOM);
+
+        loadPokemon();
     }
+        
 
     renderHTML() {
         return /*HTML*/`
